@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeMancer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="/imgs/code-mancer.jpg" type="image/x-icon" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>CodeMancer - An AI-powered code review assistant</h1>
+
+      <div class="instructions">
+        <div class="instructions-header">
+          <button id="toggle-instructions">+</button>
+          <h2>Pre-requisites</h2>
+        </div>
+        <div id="instructions-content">
+          <!-- Instructions will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <label for="server-url">Local Server URL:</label>
+      <input type="text" id="server-url" placeholder="http://localhost:8000">
+
+      <label for="language">Select Language:</label>
+      <select id="language">
+        <option value="java">Java</option>
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="sql">SQL</option>
+        <option value="plsql">PLSQL</option>
+        <option value="xquery">XQuery</option>
+        <option value="javascript">JavaScript</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+      </select>
+
+      <label for="max-length">Max Tokens:</label>
+      <select id="max-length">
+        <!-- Options will be populated by JavaScript -->
+      </select>
+
+      <label for="code-input">Paste Your Code Here:</label>
+      <textarea id="code-input" placeholder="Enter your code..."></textarea>
+
+      <button id="analyze-btn">Analyze Code</button>
+
+      <div id="result-container">
+        <h2>Analysis Result</h2>
+        <pre id="result"></pre>
+        <div class="copy-btn-container">
+          <button id="copy-btn">Copy to Clipboard</button>
+        </div>
+      </div>
+
+      <div class="donate-me">
+        <h3>Support My Work</h3>
+        <p>If you find this tool useful, consider donating to support its development and maintenance. Thank you! ❤️</p>
+        <a href="https://www.paypal.me/erravz" target="_blank">
+            <img src="/imgs/paypal_button.png" alt="Donate with PayPal" />
+        </a>
+    </div>
+      <div class="footer"> &copy;2025 ravzzy</div>
+
+    </div>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
